@@ -15,10 +15,11 @@
           <ng-container *ngFor="let item of menuItems">
               <div [fxShow]="!item.showOnDesktop"
                    [fxShow.sm]="!item.showOnTablet"
-                   [fxShow.xs]="!item.showOnMobile">
+                   [fxShow.xs]="!item.showOnMobile"
+                   >
                   <button mat-menu-item>
                       <mat-icon class="mr">{{item.icon}}</mat-icon>
-                      {{item.label}}
+                     <a routerLink="item.router"> {{item.label}}</a>
                   </button>
               </div>
           </ng-container>

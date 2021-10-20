@@ -4,4 +4,5 @@ export interface Menu {
   showOnMobile: boolean;
   showOnTablet: boolean;
   showOnDesktop: boolean;
+  router:string;
 }

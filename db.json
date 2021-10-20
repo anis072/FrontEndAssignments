@@ -1,16 +1,102 @@
 {
-  "posts": [
+  "messages": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "sender": "Peter JHonson",
+      "message": "Lorem Ipsum is simply dummy text used in the composition and layout before printing. Lorem Ipsum has been the standard dummy text of printing since the 1500s, when an anonymous printer assembled pieces of text together to make a specimen text font book. He didn't just survive five centuries,",
+      "date": "25/02/2014"
+    },
+    {
+      "id": 2,
+      "sender": "Peter JHonson Fhans",
+      "message": "Lorem Ipsum is simply dummy text used in the composition and layout before printing. Lorem Ipsum has been the standard dummy text of printing since the 1500s, when an anonymous printer assembled pieces of text together to make a specimen text font book. He didn't just survive five centuries,",
+      "date": "25/02/2014"
+    },
+    {
+      "id": 3,
+      "sender": "Peter JHonson Fabian",
+      "message": "Lorem Ipsum is simply dummy text used in the composition and layout before printing. Lorem Ipsum has been the standard dummy text of printing since the 1500s, when an anonymous printer assembled pieces of text together to make a specimen text font book. He didn't just survive five centuries,",
+      "date": "25/02/2014"
+    },
+    {
+      "id": 4,
+      "sender": "Peter lkol",
+      "message": "Lorem Ipsum is simply dummy text used in the composition and layout before printing. Lorem Ipsum has been the standard dummy text of printing since the 1500s, when an anonymous printer assembled pieces of text together to make a specimen text font book. He didn't just survive five centuries,",
+      "date": "25/02/2014"
+    },
+    {
+      "id": 5,
+      "sender": "Fabian luis",
+      "message": "Lorem Ipsum is simply dummy text used in the composition and layout before printing. Lorem Ipsum has been the standard dummy text of printing since the 1500s, when an anonymous printer assembled pieces of text together to make a specimen text font book. He didn't just survive five centuries,",
+      "date": "25/02/2014"
+    },
+    {
+      "id": 6,
+      "sender": "Chaili winston",
+      "message": "Lorem Ipsum is simply dummy text used in the composition and layout before printing. Lorem Ipsum has been the standard dummy text of printing since the 1500s, when an anonymous printer assembled pieces of text together to make a specimen text font book. He didn't just survive five centuries,",
+      "date": "25/02/2014"
+    },
+    {
+      "id": 7,
+      "sender": "Chaili winston",
+      "message": "Lorem Ipsum is simply dummy text used in the composition and layout before printing. Lorem Ipsum has been the standard dummy text of printing since the 1500s, when an anonymous printer assembled pieces of text together to make a specimen text font book. He didn't just survive five centuries,",
+      "date": "25/02/2014"
+    },
+    {
+      "id": 8,
+      "sender": "Chaili winston",
+      "message": "Lorem Ipsum is simply dummy text used in the composition and layout before printing. Lorem Ipsum has been the standard dummy text of printing since the 1500s, when an anonymous printer assembled pieces of text together to make a specimen text font book. He didn't just survive five centuries,",
+      "date": "25/02/2014"
+    },
+    {
+      "id": 9,
+      "sender": "Chaili winston",
+      "message": "Lorem Ipsum is simply dummy text used in the composition and layout before printing. Lorem Ipsum has been the standard dummy text of printing since the 1500s, when an anonymous printer assembled pieces of text together to make a specimen text font book. He didn't just survive five centuries,",
+      "date": "25/02/2014"
+    },
+    {
+      "id": 10,
+      "sender": "Chaili winston",
+      "message": "Lorem Ipsum is simply dummy text used in the composition and layout before printing. Lorem Ipsum has been the standard dummy text of printing since the 1500s, when an anonymous printer assembled pieces of text together to make a specimen text font book. He didn't just survive five centuries,",
+      "date": "25/02/2014"
     }
   ],
-  "comments": [
+  "statsLine": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "data": [10, 41, 35, 51, 49, 62, 69, 91, 148],
+      "categories": [
+        "Ahmed",
+        "Salim",
+        "Lotfi",
+        "Loulou",
+        "Hamma",
+        "JKK",
+        "POM",
+        "POS",
+        "PLO"
+      ]
+    }
+  ],
+  "statsPie":[
+    {
+      "data":[44, 55, 13, 43, 22],
+      "lables":["Team A", "Team B", "Team C", "Team D", "Team E"]
+    }
+  ],
+  "doubleStats":[
+    {
+      "data":[11, 32, 45, 32, 34, 52, 41],
+      "data2":  [31, 40, 28, 51, 42, 109, 100],
+      "categories": [
+        "2018-09-19T00:00:00.000Z",
+        "2018-09-19T01:30:00.000Z",
+        "2018-09-19T02:30:00.000Z",
+        "2018-09-19T03:30:00.000Z",
+        "2018-09-19T04:30:00.000Z",
+        "2018-09-19T05:30:00.000Z",
+        "2018-09-19T06:30:00.000Z"
+      ]
     }
   ],
   "profile": {

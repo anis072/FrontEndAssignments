@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { HttpClientModule } from '@angular/common/http';
  const routes: Routes = [
    {
      path:'login',
@@ -25,7 +27,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FlexLayoutModule,
     AngularMaterialModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgApexchartsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

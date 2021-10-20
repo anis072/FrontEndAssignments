@@ -13,21 +13,24 @@ export class ToolBarComponent implements OnInit {
       icon: 'messages',
       showOnMobile: true,
       showOnTablet: true,
-      showOnDesktop: true
+      showOnDesktop: true,
+      router:'messages'
     },
     {
       label: 'Profile',
       icon: 'account_circle',
       showOnMobile: false,
       showOnTablet: true,
-      showOnDesktop: true
+      showOnDesktop: true,
+      router:'/profile'
     },
     {
       label:'logout',
       icon: 'arrow_right_alt',
       showOnMobile: false,
       showOnTablet: true,
-      showOnDesktop: true
+      showOnDesktop: true,
+      router:''
     }
   ];
   constructor() { }

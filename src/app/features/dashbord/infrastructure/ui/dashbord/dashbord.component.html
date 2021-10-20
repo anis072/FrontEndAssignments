@@ -1,7 +1,69 @@
-<app-tool-bar></app-tool-bar>
-<ng-container >
+
+<div>
+  <div class="flex-custom" fxLayout="row "  fxLayout.xs="column">
+  <mat-card>
+    <mat-card-title>Most frequent users You chats with</mat-card-title>
+    <div id="chart" style="text-align:center">
+      <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [xaxis]="chartOptions.xaxis"
+
+      ></apx-chart>
+    </div>
+  </mat-card>
   <mat-card>
     <mat-card-title>Pie Charts</mat-card-title>
+    <div id="chartPie">
+      <apx-chart
+        [series]="chartOptionsPie.series"
+        [chart]="chartOptionsPie.chart"
+        [labels]="chartOptionsPie.labels"
+        [responsive]="chartOptionsPie.responsive"
+      ></apx-chart>
+    </div>
   </mat-card>
-</ng-container>
+  <mat-card>
+    <mat-card-title>Pie Charts</mat-card-title>
+    <div id="chart" *ngIf="lineData">
+      <apx-chart *ngIf="lineData "
+        [series]="chartOptionsLab.series"
+        [chart]="chartOptionsLab.chart"
+        [xaxis]="chartOptionsLab.xaxis"
+        [stroke]="chartOptionsLab.stroke"
+        [tooltip]="chartOptionsLab.tooltip"
+        [dataLabels]="chartOptionsLab.dataLabels"
+      ></apx-chart>
+    </div>
+  </mat-card>
+</div>
+  <div class="custom-table"  fxLayout="row"  fxLayout.xl="column">
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+      <!-- Position Column -->
+
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="Sender name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Sender Name </th>
+        <td mat-cell *matCellDef="let element"> {{element?.sender}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="Message">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Message </th>
+        <td mat-cell *matCellDef="let element"> {{element?.message}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="Date">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
+        <td mat-cell *matCellDef="let element"> {{element?.date}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+</div>
 
