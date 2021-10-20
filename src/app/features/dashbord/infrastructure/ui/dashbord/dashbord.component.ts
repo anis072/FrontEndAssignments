@@ -59,59 +59,24 @@ export class DashbordComponent implements OnInit {
   lineCategory !: string[];
   pieData !: number[];
   pieCategory !: string[];
+  doubleChartsData !: number[];
+  doubleChartsData1 !: number[];
+  doublechartsCategorie !: number[];
   constructor(private messageService: MessageService) {
-    this.getLineStats()
-    this.getPieStats();
-    this.chartOptionsLab = {
-      series: [
-        {
-          name: 'series1',
-          data: [31, 40, 28, 51, 42, 109, 100],
-        },
-        {
-          name: 'series2',
-          data: [11, 32, 45, 32, 34, 52, 41],
-        },
-      ],
-      chart: {
-        height: 350,
-        type: 'area',
-      },
-      dataLabels: {
-        enabled: false,
-      },
-      stroke: {
-        curve: 'smooth',
-      },
-      xaxis: {
-        type: 'datetime',
-        categories: [
-          '2018-09-19T00:00:00.000Z',
-          '2018-09-19T01:30:00.000Z',
-          '2018-09-19T02:30:00.000Z',
-          '2018-09-19T03:30:00.000Z',
-          '2018-09-19T04:30:00.000Z',
-          '2018-09-19T05:30:00.000Z',
-          '2018-09-19T06:30:00.000Z',
-        ],
-      },
-      tooltip: {
-        x: {
-          format: 'dd/MM/yy HH:mm',
-        },
-      },
-    };
+   //
   }
 
   ngOnInit(): void {
     this.getMessages();
+    this.getLineStats()
     this.getPieStats();
+    this.getDoubleStats();
+   // this.getPieStats();
   }
   getMessages(): void {
     this.messageService.getMessages().subscribe({
       next: (data) => {
         this.messages$ = data;
-        console.log(this.messages$);
         this.dataSource = new MatTableDataSource(this.messages$);
         this.dataSource.sort = this.sort;
       },
@@ -135,16 +100,14 @@ export class DashbordComponent implements OnInit {
             type: 'bar',
           },
           title: {
-            text: 'My First Angular Chart',
+            text: '',
           },
           xaxis: {
             categories:[...data[0].categories]
           },
         };
-        console.log(data);
-        this.lineData = data.data;
+        this.lineData = data;
         this.lineCategory = data.categories;
-        console.log(this.lineData,this.lineCategory)
       },
       error:err=>{
         console.log(err);
@@ -174,6 +137,45 @@ export class DashbordComponent implements OnInit {
             },
           ],
         };
+        this.pieData = data;
+      }
+    })
+  }
+  getDoubleStats():void{
+    this.messageService.getDoubleStats().subscribe({
+      next:data=>{
+        this.chartOptionsLab = {
+          series: [
+            {
+              name: 'series1',
+              data:[...data[0]?.data],
+            },
+            {
+              name: 'series2',
+              data: [...data[0]?.data2],
+            },
+          ],
+          chart: {
+            height: 350,
+            type: 'area',
+          },
+          dataLabels: {
+            enabled: false,
+          },
+          stroke: {
+            curve: 'smooth',
+          },
+          xaxis: {
+            type: 'datetime',
+            categories:[...data[0]?.categories]
+          },
+          tooltip: {
+            x: {
+              format: 'dd/MM/yy HH:mm',
+            },
+          },
+        };
+        this.doubleChartsData = data;
       }
     })
   }

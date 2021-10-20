@@ -9,7 +9,11 @@ import { AngularMaterialModule } from '../angular-material/angular-material.modu
 
 const routes:Routes=[
   {
-    path:'',
+    path: '', redirectTo: 'login', pathMatch: 'full',
+},
+  {
+
+    path:'login',
     component:LoginComponent,
   },
   {

@@ -6,20 +6,25 @@ import { AngularMaterialModule } from './angular-material/angular-material.modul
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgApexchartsModule } from 'ng-apexcharts';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { LoaderComponent } from './utiles/loader/ui/loader/loader.component';
+import { LoderInterceptor } from './utiles/loader/loder.interceptor';
+import { AuthGuard } from './core/guards/auth.guard';
  const routes: Routes = [
    {
-     path:'login',
+     path:'',
      loadChildren : ()=> import('@frontEndAssignments/authentification/login').then((m)=>m.AuthentificationModule)
    },
    {
      path:'dashbord',
-     loadChildren : ()=> import('@frontEndAssignments/features/dashbord').then((m)=>m.DashbordModule)
+     loadChildren : ()=> import('@frontEndAssignments/features/dashbord').then((m)=>m.DashbordModule),
+     canActivate:[AuthGuard]
    }
  ]
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     NgApexchartsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [  { provide: HTTP_INTERCEPTORS, useClass: LoderInterceptor, multi: true },],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })

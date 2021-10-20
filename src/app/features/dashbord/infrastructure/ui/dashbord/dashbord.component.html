@@ -3,7 +3,7 @@
   <div class="flex-custom" fxLayout="row "  fxLayout.xs="column">
   <mat-card>
     <mat-card-title>Most frequent users You chats with</mat-card-title>
-    <div id="chart" style="text-align:center">
+    <div id="chart" style="text-align:center" *ngIf="lineData">
       <apx-chart
         [series]="chartOptions.series"
         [chart]="chartOptions.chart"
@@ -13,8 +13,8 @@
     </div>
   </mat-card>
   <mat-card>
-    <mat-card-title>Pie Charts</mat-card-title>
-    <div id="chartPie">
+    <mat-card-title>Total distribution of messages per user</mat-card-title>
+    <div id="chartPie" *ngIf="pieData">
       <apx-chart
         [series]="chartOptionsPie.series"
         [chart]="chartOptionsPie.chart"
@@ -24,9 +24,9 @@
     </div>
   </mat-card>
   <mat-card>
-    <mat-card-title>Pie Charts</mat-card-title>
-    <div id="chart" *ngIf="lineData">
-      <apx-chart *ngIf="lineData "
+    <mat-card-title>Total distribution of messages per user</mat-card-title>
+    <div id="chart"  *ngIf="doubleChartsData">
+      <apx-chart
         [series]="chartOptionsLab.series"
         [chart]="chartOptionsLab.chart"
         [xaxis]="chartOptionsLab.xaxis"

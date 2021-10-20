@@ -10,5 +10,16 @@ export const PATHS={
   } ,
   DoubleStats: {
     GET : {url:'/doubleStats'}
+  },
+  auth: {
+    register:{
+     POST:{url:'/users'}
+    },
+    login:{
+      POST:{url:'/users'}
+    }
+  },
+  users:{
+    GET:{url:'/users'}
   }
 }

@@ -64,7 +64,17 @@
   "statsLine": [
     {
       "id": 1,
-      "data": [10, 41, 35, 51, 49, 62, 69, 91, 148],
+      "data": [
+        10,
+        41,
+        35,
+        51,
+        49,
+        62,
+        69,
+        91,
+        148
+      ],
       "categories": [
         "Ahmed",
         "Salim",
@@ -78,16 +88,44 @@
       ]
     }
   ],
-  "statsPie":[
+  "statsPie": [
     {
-      "data":[44, 55, 13, 43, 22],
-      "lables":["Team A", "Team B", "Team C", "Team D", "Team E"]
+      "data": [
+        44,
+        55,
+        13,
+        43,
+        22
+      ],
+      "lables": [
+        "Ali",
+        "Lotfi",
+        "Samuel",
+        "Borni",
+        "Salem"
+      ]
     }
   ],
-  "doubleStats":[
+  "doubleStats": [
     {
-      "data":[11, 32, 45, 32, 34, 52, 41],
-      "data2":  [31, 40, 28, 51, 42, 109, 100],
+      "data": [
+        11,
+        32,
+        45,
+        32,
+        34,
+        52,
+        41
+      ],
+      "data2": [
+        31,
+        40,
+        28,
+        51,
+        42,
+        109,
+        100
+      ],
       "categories": [
         "2018-09-19T00:00:00.000Z",
         "2018-09-19T01:30:00.000Z",
@@ -101,5 +139,31 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "users": [
+    {
+      "id": 1,
+      "email": "aniskhalfaouiisi@gmail.com",
+      "password": "000000",
+      "username": "anis"
+    },
+    {
+      "email": "jojiju@mailinator.com",
+      "username": "hezezuwyf",
+      "password": "Sunt corrupti et o",
+      "id": 2
+    },
+    {
+      "email": "nosu@mailinator.com",
+      "username": "lifafamihi",
+      "password": "Quasi labore autem i",
+      "id": 3
+    },
+    {
+      "email": "aniskhalfaouiisi@gmail.com",
+      "username": "anis7",
+      "password": "22624265",
+      "id": 4
+    }
+  ]
 }
